@@ -8,14 +8,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
 
 export class HeaderComponent {
   collapsed = true;
-  @Output() recipesTrigger = new EventEmitter<string>();
-  @Output() splTrigger = new EventEmitter<string>();
+  @Output() featureSelected = new EventEmitter<string>();
 
-  onRecipesTrigger() {
-    this.recipesTrigger.emit('recipes');
-  }
-
-  onSplTrigger() {
-    this.splTrigger.emit('shopping list');
+  onSelect(feature: string) {
+    this.featureSelected.emit(feature);
   }
 }

@@ -6,13 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  showContent = 'recipes';
+  loadedFeature = 'recipes';
   
-  onRecipesTriggered() {
-    return this.showContent = 'recipes';
+  onNavigate(feature: string) {
+    return this.loadedFeature = feature;
   }
 
-  onSplTriggered() {
-    return this.showContent = 'shopping list';
-  }
 }
