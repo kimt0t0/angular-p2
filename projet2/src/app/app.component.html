@@ -1,9 +1,9 @@
-<app-header></app-header>
+<app-header (recipesTrigger)="onRecipesTriggered()" (splTrigger)="onSplTriggered()"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-ms-12">
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
+      <app-recipes *ngIf='showContent === "recipes"'></app-recipes>
+      <app-shopping-list *ngIf='showContent === "shopping list"'></app-shopping-list>
     </div>
   </div>
 </div>
